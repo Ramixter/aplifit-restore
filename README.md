@@ -1,3 +1,9 @@
+Comando principal:
+
+```javascript
+javascript:(function(){ if(typeof ir_a_pista==='function') ir_a_pista(1); if(typeof player!=='undefined'){player.seekTo(0,true); if(player.setPlaybackQuality)player.setPlaybackQuality('small');} setTimeout(function(){var a=document.getElementById('audio-player'); if(a){a.pause();a.removeAttribute('src');a.load();a.play=function(){return Promise.resolve();};}}, 200); if(typeof syncInterval!=='undefined')clearInterval(syncInterval); Object.defineProperty(document,'hidden',{get:function(){return false;}}); Object.defineProperty(document,'visibilityState',{get:function(){return 'visible';}}); document.addEventListener('visibilitychange',function(e){e.stopImmediatePropagation();},true); window.addEventListener('blur',function(){setTimeout(function(){if(typeof player!=='undefined'&&typeof player.playVideo==='function')player.playVideo();},100);}); alert('¡Sesión reiniciada desde cero! Video al inicio, red liberada y anti-pausa activo.'); })();
+```
+
 Esto es lo que tedemos de poner en la consola:
 
 ```javascript
