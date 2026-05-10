@@ -1,57 +1,15 @@
-# Comando Pro
+@ Pasos
 
-si no funciona la copia podemos utilizar el comando:
+1. **Mostrar la barra de marcadores:** Asegúrate de que la barra de marcadores esté visible en tu navegador (puedes activarla con `Ctrl + Shift + B` en Windows o `Cmd + Shift + B` en Mac).
+    
+2. **Crear el marcador:** Haz clic derecho en un espacio vacío de la barra de marcadores y selecciona **Añadir página** (Chrome/Edge) o **Añadir nuevo marcador** (Firefox).
+    
+3. **Configurar el nombre:** En el campo **Nombre**, escribe algo que reconozcas fácilmente, por ejemplo: `🚀 Comando Pro` o `Modo Dios`.
+    
+4. **Pegar el código:** En el campo **URL** o **Dirección**, borra cualquier `http://` que haya y **pega directamente todo el bloque de texto**:
 
-```javascript
-allow pasting
-```
+    ```javascript
+    `javascript:(function(){ if(typeof ir_a_pista==='function') ir_a_pista(1); if(typeof player!=='undefined'){player.seekTo(0,true); if(player.setPlaybackQuality)player.setPlaybackQuality('small');} setTimeout(function(){var a=document.getElementById('audio-player'); if(a){a.pause();a.removeAttribute('src');a.load();a.play=function(){return Promise.resolve();};}}, 200); if(typeof syncInterval!=='undefined')clearInterval(syncInterval); Object.defineProperty(document,'hidden',{get:function(){return false;}}); Object.defineProperty(document,'visibilityState',{get:function(){return 'visible';}}); document.addEventListener('visibilitychange',function(e){e.stopImmediatePropagation();},true); window.addEventListener('blur',function(){setTimeout(function(){if(typeof player!=='undefined'&&typeof player.playVideo==='function')player.playVideo();},100);}); if(window.jQuery && jQuery.ajaxSetup){jQuery.ajaxSetup({beforeSend:function(jqXHR,settings){if(settings.url&&settings.url.indexOf('actualitza_reproduccion_sesion')!==-1){jqXHR.abort();}}});} alert('¡Optimización Total! Sesión en min. 0, telemetría bloqueada, audio silenciado y anti-pausa activo.'); })();`
+    ```
 
-```javascript
-javascript:(function(){ if(typeof ir_a_pista==='function') ir_a_pista(1); if(typeof player!=='undefined'){player.seekTo(0,true); if(player.setPlaybackQuality)player.setPlaybackQuality('small');} setTimeout(function(){var a=document.getElementById('audio-player'); if(a){a.pause();a.removeAttribute('src');a.load();a.play=function(){return Promise.resolve();};}}, 200); if(typeof syncInterval!=='undefined')clearInterval(syncInterval); Object.defineProperty(document,'hidden',{get:function(){return false;}}); Object.defineProperty(document,'visibilityState',{get:function(){return 'visible';}}); document.addEventListener('visibilitychange',function(e){e.stopImmediatePropagation();},true); window.addEventListener('blur',function(){setTimeout(function(){if(typeof player!=='undefined'&&typeof player.playVideo==='function')player.playVideo();},100);}); if(window.jQuery && jQuery.ajaxSetup){jQuery.ajaxSetup({beforeSend:function(jqXHR,settings){if(settings.url&&settings.url.indexOf('actualitza_reproduccion_sesion')!==-1){jqXHR.abort();}}});} alert('¡Optimización Total! Sesión en min. 0, telemetría bloqueada, audio silenciado y anti-pausa activo.'); })();
-```
-
-## Pruebas anteriores
-
-Comando principal:
-
-```javascript
-javascript:(function(){ if(typeof ir_a_pista==='function') ir_a_pista(1); if(typeof player!=='undefined'){player.seekTo(0,true); if(player.setPlaybackQuality)player.setPlaybackQuality('small');} setTimeout(function(){var a=document.getElementById('audio-player'); if(a){a.pause();a.removeAttribute('src');a.load();a.play=function(){return Promise.resolve();};}}, 200); if(typeof syncInterval!=='undefined')clearInterval(syncInterval); Object.defineProperty(document,'hidden',{get:function(){return false;}}); Object.defineProperty(document,'visibilityState',{get:function(){return 'visible';}}); document.addEventListener('visibilitychange',function(e){e.stopImmediatePropagation();},true); window.addEventListener('blur',function(){setTimeout(function(){if(typeof player!=='undefined'&&typeof player.playVideo==='function')player.playVideo();},100);}); alert('¡Sesión reiniciada desde cero! Video al inicio, red liberada y anti-pausa activo.'); })();
-```
-
-Esto es lo que tedemos de poner en la consola:
-
-```javascript
-allow pasting
-```
-
-Y luego todo esto:
-
-```javascript
-// 1. Forzar el video de YouTube al principio y bajar su calidad al mínimo
-if (typeof player !== 'undefined') {
-    player.seekTo(0, true);
-    if (player.setPlaybackQuality) player.setPlaybackQuality('small'); // Fuerza calidad baja (240p)
-}
-
-// 2. Matar el audio para que deje de descargar
-var a = document.getElementById('audio-player');
-if (a) {
-    a.pause();
-    a.removeAttribute('src');
-    a.load();
-    a.play = function() { return Promise.resolve(); };
-}
-
-// 3. Detener el rastreador fantasma de Vimeo
-if (typeof syncInterval !== 'undefined') {
-    clearInterval(syncInterval);
-}
-
-console.log("¡Limpieza completada! Red y CPU liberadas.");
-```
-
-Modo completo:
-
-```javascript
-javascript:(function(){ if(typeof player!=='undefined'){player.seekTo(0,true); if(player.setPlaybackQuality)player.setPlaybackQuality('small');} var a=document.getElementById('audio-player'); if(a){a.pause();a.removeAttribute('src');a.load();a.play=function(){return Promise.resolve();};} if(typeof syncInterval!=='undefined')clearInterval(syncInterval); Object.defineProperty(document,'hidden',{get:function(){return false;}}); Object.defineProperty(document,'visibilityState',{get:function(){return 'visible';}}); document.addEventListener('visibilitychange',function(e){e.stopImmediatePropagation();},true); window.addEventListener('blur',function(){setTimeout(function(){if(typeof player!=='undefined'&&typeof player.playVideo==='function')player.playVideo();},100);}); alert('¡Modo Dios activado! Video al inicio, red liberada y anti-pausa activo.'); })();
-```
+5. **Guardar:** Haz clic en **Guardar**.
