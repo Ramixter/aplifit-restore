@@ -1,4 +1,4 @@
-@ Pasos
+# Pasos
 
 1. **Mostrar la barra de marcadores:** Asegúrate de que la barra de marcadores esté visible en tu navegador (puedes activarla con `Ctrl + Shift + B` en Windows o `Cmd + Shift + B` en Mac).
     
